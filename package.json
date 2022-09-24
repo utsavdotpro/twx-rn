@@ -12,5 +12,8 @@
     "tailwind-rn"
   ],
   "author": "Utsav Barnwal",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "clsx": "^1.2.1"
+  }
 }
