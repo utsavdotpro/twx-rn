@@ -8,3 +8,4 @@ const twx = (...args: ClassValue[]) => {
 };
 
 export default twx;
+export { twx };
