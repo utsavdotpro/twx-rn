@@ -26,7 +26,7 @@ npx setup-tailwind-rn # Generate the config file
 
 See full [documentation](https://www.npmjs.com/package/tailwind-rn).
 
-Usage
+## Usage
 
 The `twx()` supports all the conditions as the `clsx` package, see [here](https://github.com/lukeed/clsx#usage).
 
