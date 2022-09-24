@@ -1,6 +1,6 @@
 {
   "name": "twx-rn",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny utility for constructing tailwind-rn className strings conditionally",
   "main": "dist/index.js",
   "module": "dist/index.js",
