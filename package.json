@@ -1,0 +1,16 @@
+{
+  "name": "twx-rn",
+  "version": "1.0.0",
+  "description": "A tiny utility for constructing tailwind-rn className strings conditionally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tailwind",
+    "react-native",
+    "tailwind-rn"
+  ],
+  "author": "Utsav Barnwal",
+  "license": "ISC"
+}
