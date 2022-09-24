@@ -4,7 +4,9 @@
   "description": "A tiny utility for constructing tailwind-rn className strings conditionally",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "tsc",
+    "build": "tsc",
+    "patch": "npm version patch -m \"update package version to %s\""
   },
   "keywords": [
     "tailwind",
