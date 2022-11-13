@@ -37,9 +37,85 @@ import twx from 'twx-rn';
 // or
 import { twx } from 'twx-rn';
 
-<div style={tw("text-white mt-1")}>Hello Tailwind!</div>
+<View style={twx("text-white mt-1", true && "bg-black")}>Hello Tailwind!</View>
 ````
   
+## Recommended Usage
+
+> This example is in Typescript
+
+### How?
+
+Define type for your react native components
+
+```js
+// types.ts
+
+import { ViewProps } from "react-native";
+
+export type ComponentProps<T> = {
+  style?: ViewProps["style"];
+  children?: React.ReactNode;
+  className?: string;
+} & T;
+
+export interface Component<T = {}> extends React.FC<ComponentProps<T>> {}
+```
+
+Create a HOC
+
+````js
+// with-class-name.tsx
+
+import { Component, ComponentProps } from "@appTypes/.";
+import twx from "twx-rn";
+
+const withClassName =
+  <T,>(C: Component<T>) =>
+  (props: ComponentProps<T>) => {
+    const { style, className } = props;
+    return <C {...props} style={[style, twx(className)]} />;
+  };
+
+export default withClassName;
+````
+
+Create your component
+
+```js
+// HR.tsx
+
+import { Component } from "@appTypes/.";
+import { View } from "react-native";
+import twx from "twx-rn";
+import withClassName from "@hoc/with-class-name";
+
+type Props = {
+  // your extra props
+}
+
+const HR: Component<Props> = ({ style }) => {
+  return <View style={[twx("h-[1px] w-full bg-black"), style]} />;
+};
+
+export default withClassName<Props>(HR);
+```
+
+Use your component
+
+```js
+// App.tsx
+
+<HR className="bg-white" />
+// or
+<HR style={twx("bg-white")} />
+```
+
+### Why?
+
+- Better code readability
+- Easier migration from React code
+- IDE class name recommendations start working
 
 ## Contribution
 
