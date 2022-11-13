@@ -37,7 +37,7 @@ import twx from 'twx-rn';
 // or
 import { twx } from 'twx-rn';
 
-<div style={twx("text-white mt-1", true && "bg-black")}>Hello Tailwind!</div>
+<View style={twx("text-white mt-1", true && "bg-black")}>Hello Tailwind!</View>
 ````
   
 ## Recommended Usage
